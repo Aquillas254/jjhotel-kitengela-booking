@@ -8,35 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Luxury Hotel Color Palette */
+    --background: 45 20% 98%;
+    --foreground: 25 15% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 15% 97%;
+    --card-foreground: 25 15% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 15% 97%;
+    --popover-foreground: 25 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Warm Gold Primary */
+    --primary: 43 74% 49%;
+    --primary-foreground: 45 20% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm Cream Secondary */
+    --secondary: 45 25% 92%;
+    --secondary-foreground: 25 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft Muted Tones */
+    --muted: 45 15% 90%;
+    --muted-foreground: 25 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Rich Brown Accent */
+    --accent: 25 45% 35%;
+    --accent-foreground: 45 20% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 45 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 20% 85%;
+    --input: 45 20% 90%;
+    --ring: 43 74% 49%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Hotel Design Tokens */
+    --luxury-gold: 43 74% 49%;
+    --luxury-gold-light: 43 65% 65%;
+    --luxury-brown: 25 45% 35%;
+    --luxury-cream: 45 25% 92%;
+    --luxury-white: 45 20% 98%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--luxury-gold)) 0%, hsl(var(--luxury-brown)) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(var(--luxury-white)) 0%, hsl(var(--luxury-cream)) 100%);
+    
+    /* Shadows */
+    --shadow-luxury: 0 20px 60px -10px hsl(var(--luxury-gold) / 0.2);
+    --shadow-card: 0 10px 30px -5px hsl(var(--luxury-brown) / 0.1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +76,47 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode - Sophisticated Evening Palette */
+    --background: 25 15% 8%;
+    --foreground: 45 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 15% 10%;
+    --card-foreground: 45 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 15% 10%;
+    --popover-foreground: 45 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 43 74% 55%;
+    --primary-foreground: 25 15% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 15% 15%;
+    --secondary-foreground: 45 20% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 15% 15%;
+    --muted-foreground: 45 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 43 60% 45%;
+    --accent-foreground: 25 15% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 45 20% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 25 15% 20%;
+    --input: 25 15% 15%;
+    --ring: 43 74% 55%;
+    
+    /* Dark Mode Luxury Tokens */
+    --luxury-gold: 43 74% 55%;
+    --luxury-gold-light: 43 65% 70%;
+    --luxury-brown: 25 35% 25%;
+    --luxury-cream: 25 15% 15%;
+    --luxury-white: 25 15% 10%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--luxury-gold)) 0%, hsl(var(--luxury-brown)) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(var(--luxury-white)) 0%, hsl(var(--luxury-cream)) 100%);
+    
+    --shadow-luxury: 0 20px 60px -10px hsl(var(--luxury-gold) / 0.3);
+    --shadow-card: 0 10px 30px -5px hsl(0 0% 0% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +134,54 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/30;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .text-luxury-gold {
+    color: hsl(var(--luxury-gold));
+  }
+  
+  .text-luxury-brown {
+    color: hsl(var(--luxury-brown));
+  }
+  
+  .bg-luxury-cream {
+    background-color: hsl(var(--luxury-cream));
   }
 }
