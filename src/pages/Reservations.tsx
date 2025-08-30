@@ -8,9 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useForm } from "react-hook-form";
 import { toast } from "@/hooks/use-toast";
-import { Calendar, Clock, Users, Phone, Mail, MessageSquare } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
+import { Calendar, Clock, Users, Phone, Mail, MessageSquare, CheckCircle } from "lucide-react";
 
 const Reservations = () => {
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  
   const form = useForm({
     defaultValues: {
       name: "",
@@ -23,14 +28,42 @@ const Reservations = () => {
     },
   });
 
-  const onSubmit = (data: any) => {
-    // This will be connected to Supabase later
-    console.log("Reservation:", data);
-    toast({
-      title: "Reservation Request Sent!",
-      description: "We'll confirm your reservation within 2 hours via email or phone.",
-    });
-    form.reset();
+  const onSubmit = async (data: any) => {
+    setLoading(true);
+
+    try {
+      const { error } = await supabase
+        .from('reservations')
+        .insert([
+          {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            guests: parseInt(data.guests),
+            date: data.date,
+            time: data.time,
+            message: data.message || null,
+          },
+        ]);
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast({
+        title: "Reservation Submitted!",
+        description: "Thank you for your reservation. We will contact you soon to confirm.",
+      });
+
+      form.reset();
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to submit reservation. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const timeSlots = [
@@ -65,14 +98,32 @@ const Reservations = () => {
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Form */}
               <div className="lg:col-span-2">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Restaurant Reservation</CardTitle>
-                    <CardDescription>
-                      Fill out the form below to reserve your table. All fields are required.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
+                {submitted ? (
+                  <Card>
+                    <CardContent className="pt-6">
+                      <div className="text-center space-y-4">
+                        <div className="flex justify-center">
+                          <CheckCircle className="h-16 w-16 text-green-500" />
+                        </div>
+                        <h3 className="text-xl font-semibold">Reservation Submitted!</h3>
+                        <p className="text-muted-foreground">
+                          Thank you for your reservation. We will contact you soon to confirm your booking.
+                        </p>
+                        <Button onClick={() => setSubmitted(false)} variant="outline">
+                          Make Another Reservation
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ) : (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-2xl">Restaurant Reservation</CardTitle>
+                      <CardDescription>
+                        Fill out the form below to reserve your table. All fields are required.
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                         <div className="grid md:grid-cols-2 gap-4">
@@ -224,8 +275,8 @@ const Reservations = () => {
                           )}
                         />
 
-                        <Button type="submit" className="w-full" size="lg">
-                          Submit Reservation Request
+                        <Button type="submit" className="w-full" size="lg" disabled={loading}>
+                          {loading ? 'Submitting...' : 'Submit Reservation Request'}
                         </Button>
 
                         <p className="text-sm text-muted-foreground text-center">
@@ -236,6 +287,7 @@ const Reservations = () => {
                     </Form>
                   </CardContent>
                 </Card>
+                )}
               </div>
 
               {/* Sidebar Info */}
