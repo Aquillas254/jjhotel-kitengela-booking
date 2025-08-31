@@ -85,15 +85,15 @@ const Contact = () => {
                 <CardContent className="space-y-2">
                   <div>
                     <p className="font-medium">Main Reception</p>
-                    <p className="text-muted-foreground">+254 700 000 000</p>
+                    <p className="text-muted-foreground">+254726705016</p>
                   </div>
                   <div>
                     <p className="font-medium">Reservations</p>
-                    <p className="text-muted-foreground">+254 700 000 001</p>
+                    <p className="text-muted-foreground">+254726705016</p>
                   </div>
                   <div>
                     <p className="font-medium">Events</p>
-                    <p className="text-muted-foreground">+254 700 000 002</p>
+                    <p className="text-muted-foreground">+254726705016</p>
                   </div>
                 </CardContent>
               </Card>
@@ -108,15 +108,15 @@ const Contact = () => {
                 <CardContent className="space-y-2">
                   <div>
                     <p className="font-medium">General Inquiries</p>
-                    <p className="text-muted-foreground">info@jjhotel.com</p>
+                    <p className="text-muted-foreground">jjhotel@gmail.com</p>
                   </div>
                   <div>
                     <p className="font-medium">Reservations</p>
-                    <p className="text-muted-foreground">reservations@jjhotel.com</p>
+                    <p className="text-muted-foreground">jjhotel@gmail.com</p>
                   </div>
                   <div>
                     <p className="font-medium">Events</p>
-                    <p className="text-muted-foreground">events@jjhotel.com</p>
+                    <p className="text-muted-foreground">jjhotel@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>

@@ -59,11 +59,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-luxury-gold-light flex-shrink-0" />
-                <span className="text-sm text-luxury-white/80">+254 123 456 789</span>
+                <a href="tel:+254726705016" className="text-sm text-luxury-white/80 hover:text-luxury-gold-light transition-colors">+254726705016</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-luxury-gold-light flex-shrink-0" />
-                <span className="text-sm text-luxury-white/80">info@jjhotel.com</span>
+                <a href="mailto:jjhotel@gmail.com" className="text-sm text-luxury-white/80 hover:text-luxury-gold-light transition-colors">jjhotel@gmail.com</a>
               </div>
             </div>
           </div>
@@ -72,13 +72,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-luxury-gold-light">Follow Us</h4>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="p-2 bg-luxury-white/10 rounded-lg hover:bg-luxury-gold-light/20 transition-colors">
+              <a href="https://facebook.com/jandjhotel" target="_blank" rel="noopener noreferrer" className="p-2 bg-luxury-white/10 rounded-lg hover:bg-luxury-gold-light/20 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 bg-luxury-white/10 rounded-lg hover:bg-luxury-gold-light/20 transition-colors">
+              <a href="https://instagram.com/jandjhotel" target="_blank" rel="noopener noreferrer" className="p-2 bg-luxury-white/10 rounded-lg hover:bg-luxury-gold-light/20 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 bg-luxury-white/10 rounded-lg hover:bg-luxury-gold-light/20 transition-colors">
+              <a href="https://twitter.com/jandjhotel" target="_blank" rel="noopener noreferrer" className="p-2 bg-luxury-white/10 rounded-lg hover:bg-luxury-gold-light/20 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
