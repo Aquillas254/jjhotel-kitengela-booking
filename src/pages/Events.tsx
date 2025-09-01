@@ -114,11 +114,6 @@ const Events = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full" asChild>
-                    <a href="mailto:jjhotel@gmail.com?subject=Event Quote Request&body=I am interested in the {pkg.title} package. Please provide more details.">
-                      Request Quote
-                    </a>
-                  </Button>
                 </CardContent>
               </Card>
             ))}

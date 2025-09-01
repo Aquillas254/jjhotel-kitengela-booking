@@ -266,11 +266,6 @@ const Dining = () => {
                     </Badge>
                   </div>
 
-                  <Button className="w-full bg-primary hover:bg-primary/90" asChild>
-                    <a href="mailto:jjhotel@gmail.com?subject=Dining Package Inquiry&body=I am interested in the {pkg.name}. Please provide more details and pricing.">
-                      Get Quote
-                    </a>
-                  </Button>
                 </CardContent>
               </Card>
             ))}
