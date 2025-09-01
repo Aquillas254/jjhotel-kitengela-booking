@@ -16,7 +16,7 @@ const Dining = () => {
       capacity: "120 Guests",
       description: "Our signature restaurant offering an exquisite blend of international cuisine and authentic Kenyan flavors in an elegant setting.",
       specialties: ["Grilled Nyama Choma", "Continental Breakfast", "Seafood Specialties", "Vegetarian Options"],
-      priceRange: "KSh 1,500 - 4,500",
+      priceRange: "Contact for Menu & Pricing",
       featured: true
     },
     {
@@ -27,7 +27,7 @@ const Dining = () => {
       capacity: "60 Guests",
       description: "Relax and unwind in our sophisticated lounge, featuring premium wines, crafted cocktails, and light appetizers.",
       specialties: ["Signature Cocktails", "Wine Selection", "Artisan Cheese Board", "Gourmet Snacks"],
-      priceRange: "KSh 800 - 2,500",
+      priceRange: "Contact for Menu & Pricing",
       featured: false
     },
     {
@@ -38,7 +38,7 @@ const Dining = () => {
       capacity: "30 Guests",
       description: "Start your day with freshly brewed coffee, artisan pastries, and light breakfast options in our cozy café setting.",
       specialties: ["Kenyan Coffee", "Fresh Pastries", "Breakfast Wraps", "Healthy Smoothies"],
-      priceRange: "KSh 200 - 1,200",
+      priceRange: "Contact for Menu & Pricing",
       featured: false
     }
   ];
@@ -48,27 +48,27 @@ const Dining = () => {
       category: "Breakfast",
       time: "6:00 AM - 11:00 AM",
       items: [
-        { name: "Continental Breakfast", price: "KSh 1,800", desc: "Fresh fruits, pastries, cereals, and beverages" },
-        { name: "English Breakfast", price: "KSh 2,200", desc: "Eggs, bacon, sausages, beans, toast, and coffee" },
-        { name: "Kenyan Breakfast", price: "KSh 1,500", desc: "Mandazi, chai, seasonal fruits, and local delicacies" }
+        { name: "Continental Breakfast", price: "Available", desc: "Fresh fruits, pastries, cereals, and beverages" },
+        { name: "English Breakfast", price: "Available", desc: "Eggs, bacon, sausages, beans, toast, and coffee" },
+        { name: "Kenyan Breakfast", price: "Available", desc: "Mandazi, chai, seasonal fruits, and local delicacies" }
       ]
     },
     {
       category: "Main Courses",
       time: "12:00 PM - 10:00 PM",
       items: [
-        { name: "Nyama Choma Platter", price: "KSh 3,200", desc: "Grilled meat served with ugali and sukuma wiki" },
-        { name: "Seafood Paella", price: "KSh 4,500", desc: "Spanish-style rice with fresh seafood and spices" },
-        { name: "Grilled Tilapia", price: "KSh 2,800", desc: "Fresh tilapia with steamed vegetables and rice" }
+        { name: "Nyama Choma Platter", price: "Available", desc: "Grilled meat served with ugali and sukuma wiki" },
+        { name: "Seafood Paella", price: "Available", desc: "Spanish-style rice with fresh seafood and spices" },
+        { name: "Grilled Tilapia", price: "Available", desc: "Fresh tilapia with steamed vegetables and rice" }
       ]
     },
     {
       category: "Beverages",
       time: "All Day",
       items: [
-        { name: "Kenyan Coffee", price: "KSh 400", desc: "Locally sourced premium coffee beans" },
-        { name: "Fresh Juice", price: "KSh 350", desc: "Seasonal fruit juices made to order" },
-        { name: "Signature Cocktail", price: "KSh 1,200", desc: "House specialty crafted cocktails" }
+        { name: "Kenyan Coffee", price: "Available", desc: "Locally sourced premium coffee beans" },
+        { name: "Fresh Juice", price: "Available", desc: "Seasonal fruit juices made to order" },
+        { name: "Signature Cocktail", price: "Available", desc: "House specialty crafted cocktails" }
       ]
     }
   ];
@@ -76,21 +76,21 @@ const Dining = () => {
   const diningPackages = [
     {
       name: "Romantic Dinner Package",
-      price: "KSh 8,500",
+      price: "Contact for Quote",
       duration: "2 people",
       includes: ["3-course dinner", "Bottle of wine", "Private table setup", "Complimentary dessert"],
       perfect: "Couples & Special Occasions"
     },
     {
       name: "Business Lunch",
-      price: "KSh 2,500",
+      price: "Contact for Quote",
       duration: "per person",
       includes: ["2-course meal", "Coffee/Tea", "Wi-Fi access", "Meeting room for 2 hours"],
       perfect: "Corporate Meetings"
     },
     {
       name: "Family Feast",
-      price: "KSh 12,000",
+      price: "Contact for Quote",
       duration: "up to 6 people",
       includes: ["Buffet dinner", "Kids menu", "Family games", "Complimentary soft drinks"],
       perfect: "Family Gatherings"
@@ -267,7 +267,9 @@ const Dining = () => {
                   </div>
 
                   <Button className="w-full bg-primary hover:bg-primary/90" asChild>
-                    <Link to="/reservations">Book Package</Link>
+                    <a href="mailto:jjhotel@gmail.com?subject=Dining Package Inquiry&body=I am interested in the {pkg.name}. Please provide more details and pricing.">
+                      Get Quote
+                    </a>
                   </Button>
                 </CardContent>
               </Card>

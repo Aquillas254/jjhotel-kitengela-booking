@@ -11,8 +11,8 @@ const Rooms = () => {
     {
       id: 1,
       name: "Standard Room",
-      price: "KSh 8,500",
-      period: "per night",
+      price: "Contact for Rates",
+      period: "",
       capacity: "2 Guests",
       size: "25 sqm",
       amenities: ["Free Wi-Fi", "Air Conditioning", "Flat Screen TV", "Mini Fridge", "Private Bathroom"],
@@ -23,8 +23,8 @@ const Rooms = () => {
     {
       id: 2,
       name: "Deluxe Suite",
-      price: "KSh 15,000",
-      period: "per night",
+      price: "Contact for Rates",
+      period: "",
       capacity: "3 Guests",
       size: "40 sqm",
       amenities: ["Free Wi-Fi", "Air Conditioning", "Smart TV", "Mini Bar", "Luxury Bathroom", "Balcony"],
@@ -35,8 +35,8 @@ const Rooms = () => {
     {
       id: 3,
       name: "Executive Suite",
-      price: "KSh 25,000",
-      period: "per night",
+      price: "Contact for Rates",
+      period: "",
       capacity: "4 Guests",
       size: "60 sqm",
       amenities: ["Free Wi-Fi", "Air Conditioning", "Premium TV", "Full Mini Bar", "Jacuzzi", "Private Balcony"],
@@ -47,8 +47,8 @@ const Rooms = () => {
     {
       id: 4,
       name: "Family Room",
-      price: "KSh 18,000",
-      period: "per night",
+      price: "Contact for Rates",
+      period: "",
       capacity: "5 Guests",
       size: "50 sqm",
       amenities: ["Free Wi-Fi", "Air Conditioning", "Multiple TVs", "Kitchenette", "Family Bathroom"],
@@ -165,11 +165,13 @@ const Rooms = () => {
                   {/* Price and Booking */}
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-3xl font-bold text-luxury-gold">{room.price}</div>
-                      <div className="text-sm text-muted-foreground">{room.period}</div>
+                      <div className="text-2xl font-bold text-luxury-gold">{room.price}</div>
+                      {room.period && <div className="text-sm text-muted-foreground">{room.period}</div>}
                     </div>
                     <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                      <Link to="/reservations">Book Now</Link>
+                      <a href="mailto:jjhotel@gmail.com?subject=Room Booking Inquiry&body=I am interested in booking the {room.name}. Please provide availability and rates.">
+                        Get Quote
+                      </a>
                     </Button>
                   </div>
                 </CardContent>

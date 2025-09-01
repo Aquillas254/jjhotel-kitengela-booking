@@ -24,11 +24,10 @@ const Events = () => {
   });
 
   const onSubmit = (data: any) => {
-    // This will be connected to Supabase later
     console.log("Event inquiry:", data);
     toast({
-      title: "Inquiry Sent!",
-      description: "We'll contact you within 24 hours to discuss your event.",
+      title: "Thank you for your interest!",
+      description: "Please contact us directly at jjhotel@gmail.com or +254726705016 for event planning assistance.",
     });
     form.reset();
   };
@@ -39,21 +38,21 @@ const Events = () => {
       description: "Make your special day unforgettable with our elegant wedding packages",
       features: ["Bridal Suite", "Ceremony Setup", "Reception Hall", "Wedding Coordinator", "Catering Services"],
       image: "/placeholder.svg",
-      price: "From $5,000",
+      price: "Contact for Quote",
     },
     {
       title: "Corporate Meetings",
       description: "Professional meeting spaces with modern technology and catering",
       features: ["AV Equipment", "High-Speed WiFi", "Coffee Breaks", "Lunch Options", "Parking Available"],
       image: "/placeholder.svg",
-      price: "From $500/day",
+      price: "Contact for Quote",
     },
     {
       title: "Private Parties",
       description: "Celebrate birthdays, anniversaries, and special occasions in style",
       features: ["Private Dining", "Custom Decorations", "Sound System", "Bar Service", "Photography"],
       image: "/placeholder.svg",
-      price: "From $1,500",
+      price: "Contact for Quote",
     },
   ];
 
@@ -115,7 +114,11 @@ const Events = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">Request Quote</Button>
+                  <Button className="w-full" asChild>
+                    <a href="mailto:jjhotel@gmail.com?subject=Event Quote Request&body=I am interested in the {pkg.title} package. Please provide more details.">
+                      Request Quote
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ))}

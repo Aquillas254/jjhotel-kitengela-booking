@@ -32,9 +32,10 @@ const About = () => {
                 blend of modern hospitality and traditional Kenyan warmth.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Since our inception, we have been committed to providing an unparalleled 
-                experience for every guest. Whether you're visiting for business, leisure, 
-                or special events, J & J Hotel offers a sanctuary where luxury meets 
+                As a newly established hotel, we bring fresh energy and modern standards 
+                to the hospitality industry in Kitengela. Our commitment is to provide an 
+                unparalleled experience for every guest. Whether you're visiting for business, 
+                leisure, or special events, J & J Hotel offers a sanctuary where luxury meets 
                 authentic African hospitality.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
