@@ -161,139 +161,58 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Event Inquiry Form */}
+      {/* Contact for Event Planning */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Plan Your Event
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Tell us about your event and we'll create a customized proposal for you
-              </p>
-            </div>
-
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Plan Your Event
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Contact our events team directly to discuss your requirements and get a customized proposal
+            </p>
+            
             <Card>
-              <CardHeader>
-                <CardTitle>Event Inquiry Form</CardTitle>
-                <CardDescription>
-                  Fill out the form below and our events team will contact you within 24 hours
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Full Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your name" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                              <Input type="email" placeholder="your.email@example.com" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+              <CardContent className="pt-6">
+                <div className="space-y-6">
+                  <div className="flex items-center justify-center space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-primary" />
                     </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Phone Number</FormLabel>
-                            <FormControl>
-                              <Input placeholder="+254 700 000 000" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="eventType"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Event Type</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Wedding, Corporate, Party..." {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                    <div className="text-left">
+                      <h3 className="font-semibold text-foreground">Email Us</h3>
+                      <p className="text-muted-foreground">jjhotel@gmail.com</p>
                     </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="date"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Preferred Date</FormLabel>
-                            <FormControl>
-                              <Input type="date" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="guests"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Number of Guests</FormLabel>
-                            <FormControl>
-                              <Input type="number" placeholder="50" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                  </div>
+                  
+                  <div className="flex items-center justify-center space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Clock className="w-6 h-6 text-primary" />
                     </div>
-
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Event Details & Special Requests</FormLabel>
-                          <FormControl>
-                            <Textarea 
-                              placeholder="Tell us about your event, special requirements, budget range, etc."
-                              className="min-h-[120px]"
-                              {...field} 
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <Button type="submit" className="w-full" size="lg">
-                      Send Inquiry
-                    </Button>
-                  </form>
-                </Form>
+                    <div className="text-left">
+                      <h3 className="font-semibold text-foreground">Call Us</h3>
+                      <p className="text-muted-foreground">+254726705016</p>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Our events team is available 24/7 to help you plan the perfect event
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <Button asChild>
+                        <a href="mailto:jjhotel@gmail.com?subject=Event Planning Inquiry">
+                          Send Email
+                        </a>
+                      </Button>
+                      <Button variant="outline" asChild>
+                        <a href="tel:+254726705016">
+                          Call Now
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
