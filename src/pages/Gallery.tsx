@@ -3,52 +3,55 @@ import Footer from "@/components/ui/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import hotelRoom1 from "@/assets/hotel-room-1.jpg";
-import conferenceRoom from "@/assets/hotel-conference-room.jpg";
-import hotelBeverages from "@/assets/hotel-beverages.jpg";
+import hotelRoom2 from "@/assets/hotel-room-2.jpg";
+import conferenceRoom1 from "@/assets/hotel-conference-room-1.jpg";
+import conferenceRoom2 from "@/assets/hotel-conference-room-2.jpg";
+import hotelDrink1 from "@/assets/hotel-drink-1.jpg";
+import hotelDrink2 from "@/assets/hotel-drink-2.jpg";
 
 const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
       image: hotelRoom1,
-      title: "Luxury Guest Room",
+      title: "Guest Room",
       category: "Accommodations",
-      description: "Elegantly furnished guest room with premium amenities and modern comfort."
+      description: "Comfortable and well-appointed guest room with modern amenities."
     },
     {
       id: 2,
-      image: conferenceRoom,
+      image: hotelRoom2,
+      title: "Standard Room",
+      category: "Accommodations",
+      description: "Spacious room featuring all essential amenities for a comfortable stay."
+    },
+    {
+      id: 3,
+      image: conferenceRoom1,
       title: "Conference Room",
       category: "Business Facilities",
       description: "Professional meeting space equipped for corporate events and conferences."
     },
     {
-      id: 3,
-      image: hotelBeverages,
-      title: "Bar & Beverages",
-      category: "Dining & Bar",
-      description: "Signature cocktails and refreshing beverages served 24/7."
-    },
-    {
       id: 4,
-      image: hotelRoom1,
-      title: "Standard Room",
-      category: "Accommodations",
-      description: "Comfortable and stylish rooms with all essential amenities."
-    },
-    {
-      id: 5,
-      image: conferenceRoom,
+      image: conferenceRoom2,
       title: "Meeting Hall",
       category: "Business Facilities",
       description: "Spacious venue perfect for seminars, workshops, and business meetings."
     },
     {
-      id: 6,
-      image: hotelBeverages,
-      title: "24/7 Bar Service",
+      id: 5,
+      image: hotelDrink1,
+      title: "Bar & Beverages",
       category: "Dining & Bar",
-      description: "Round-the-clock beverage service with premium drinks and cocktails."
+      description: "Premium drinks and refreshing beverages served 24/7."
+    },
+    {
+      id: 6,
+      image: hotelDrink2,
+      title: "Restaurant Service",
+      category: "Dining & Bar",
+      description: "24/7 dining service with quality meals and beverages."
     }
   ];
 
