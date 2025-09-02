@@ -11,11 +11,11 @@ const Rooms = () => {
     {
       id: 1,
       name: "Standard Room",
-      price: "Contact for Rates",
-      period: "",
+      price: "KSh 2,000",
+      period: "per night",
       capacity: "2 Guests",
       size: "25 sqm",
-      amenities: ["Free Wi-Fi", "Air Conditioning", "Flat Screen TV", "Mini Fridge", "Private Bathroom"],
+      amenities: ["Free Wi-Fi", "Private Bathroom", "Room Service"],
       features: ["City View", "Work Desk", "Daily Housekeeping"],
       description: "Comfortable and elegantly designed rooms perfect for business travelers and couples.",
       popular: false
@@ -23,11 +23,11 @@ const Rooms = () => {
     {
       id: 2,
       name: "Deluxe Suite",
-      price: "Contact for Rates",
-      period: "",
+      price: "KSh 3,500",
+      period: "per night",
       capacity: "3 Guests",
       size: "40 sqm",
-      amenities: ["Free Wi-Fi", "Air Conditioning", "Smart TV", "Mini Bar", "Luxury Bathroom", "Balcony"],
+      amenities: ["TV", "Free Wi-Fi", "Fridge", "Room Service"],
       features: ["Garden View", "Separate Living Area", "24/7 Room Service", "Premium Toiletries"],
       description: "Spacious suites with separate living areas, perfect for extended stays and small families.",
       popular: true
@@ -162,17 +162,15 @@ const Rooms = () => {
                     </div>
                   </div>
 
-                  {/* Price and Booking */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-2xl font-bold text-luxury-gold">{room.price}</div>
-                      {room.period && <div className="text-sm text-muted-foreground">{room.period}</div>}
-                    </div>
-                    <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                      <a href="mailto:jjhotel@gmail.com?subject=Room Booking Inquiry&body=I am interested in booking the {room.name}. Please provide availability and rates.">
-                        Get Quote
-                      </a>
-                    </Button>
+                  {/* Price and Contact */}
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-luxury-gold mb-2">{room.price}</div>
+                    {room.period && <div className="text-sm text-muted-foreground mb-4">{room.period}</div>}
+                    <p className="text-sm text-muted-foreground">
+                      Contact us for availability: <br />
+                      <span className="text-luxury-gold font-medium">jjhotel@gmail.com</span> | 
+                      <span className="text-luxury-gold font-medium"> +254726705016</span>
+                    </p>
                   </div>
                 </CardContent>
               </Card>

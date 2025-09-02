@@ -12,7 +12,7 @@ const Navigation = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/rooms", label: "Rooms & Suites" },
-    { href: "/dining", label: "Dining" },
+    { href: "/gallery", label: "Gallery" },
     { href: "/events", label: "Events" },
     { href: "/reservations", label: "Reservations" },
     { href: "/contact", label: "Contact" },

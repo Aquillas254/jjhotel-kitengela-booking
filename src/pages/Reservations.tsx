@@ -298,16 +298,11 @@ const Reservations = () => {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="font-medium">Monday - Thursday</span>
-                      <span className="text-muted-foreground">12:00 PM - 10:00 PM</span>
+                      <span className="font-medium">Every Day</span>
+                      <span className="text-muted-foreground">24/7 Service</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="font-medium">Friday - Saturday</span>
-                      <span className="text-muted-foreground">12:00 PM - 11:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="font-medium">Sunday</span>
-                      <span className="text-muted-foreground">12:00 PM - 9:00 PM</span>
+                    <div className="text-center text-sm text-luxury-gold">
+                      <span className="font-medium">Always Open for Your Convenience</span>
                     </div>
                   </CardContent>
                 </Card>
