@@ -3,11 +3,9 @@ import Footer from "@/components/ui/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import hotelRoomActual from "@/assets/hotel-room-actual.jpg";
-import hotelSuiteActual from "@/assets/hotel-suite-actual.jpg";
-import conferenceRoomActual from "@/assets/conference-room-actual.jpg";
-import restaurantActual from "@/assets/restaurant-actual.jpg";
+import hotelSuiteActual from "@/assets/hotel-suite-actual.jpeg";
+import conferenceRoomActual from "@/assets/conference-room-actual.jpeg";
 import barActual from "@/assets/bar-actual.jpg";
-import lobbyActual from "@/assets/lobby-actual.jpg";
 
 const Gallery = () => {
   const galleryItems = [
@@ -34,24 +32,10 @@ const Gallery = () => {
     },
     {
       id: 4,
-      image: lobbyActual,
-      title: "Hotel Lobby",
-      category: "Common Areas",
-      description: "Elegant hotel lobby designed for comfort and luxury."
-    },
-    {
-      id: 5,
       image: barActual,
       title: "Bar & Beverages",
       category: "Dining & Bar",
       description: "Premium drinks and refreshing beverages served 24/7."
-    },
-    {
-      id: 6,
-      image: restaurantActual,
-      title: "Restaurant Service",
-      category: "Dining & Bar",
-      description: "24/7 dining service with quality meals and beverages."
     }
   ];
 
