@@ -2,53 +2,53 @@ import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import hotelRoom1 from "@/assets/hotel-room-1.jpg";
-import luxurySuite from "@/assets/luxury-suite.jpg";
-import conferenceRoom from "@/assets/hotel-conference-room.jpg";
-import restaurantDining from "@/assets/restaurant-dining.jpg";
-import hotelBeverages from "@/assets/hotel-beverages.jpg";
-import heroLobby from "@/assets/hero-hotel-lobby.jpg";
+import hotelRoomActual from "@/assets/hotel-room-actual.jpg";
+import hotelSuiteActual from "@/assets/hotel-suite-actual.jpg";
+import conferenceRoomActual from "@/assets/conference-room-actual.jpg";
+import restaurantActual from "@/assets/restaurant-actual.jpg";
+import barActual from "@/assets/bar-actual.jpg";
+import lobbyActual from "@/assets/lobby-actual.jpg";
 
 const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      image: hotelRoom1,
+      image: hotelRoomActual,
       title: "Deluxe Guest Room",
       category: "Accommodations",
       description: "Elegantly furnished room with wooden furnishing and premium bedding."
     },
     {
       id: 2,
-      image: luxurySuite,
+      image: hotelSuiteActual,
       title: "Luxury Suite",
       category: "Accommodations",
       description: "Spacious luxury suite with modern amenities and elegant decor."
     },
     {
       id: 3,
-      image: conferenceRoom,
+      image: conferenceRoomActual,
       title: "Conference Hall",
       category: "Business Facilities",
       description: "Professional meeting space equipped for corporate events and conferences."
     },
     {
       id: 4,
-      image: heroLobby,
+      image: lobbyActual,
       title: "Hotel Lobby",
       category: "Common Areas",
       description: "Elegant hotel lobby designed for comfort and luxury."
     },
     {
       id: 5,
-      image: hotelBeverages,
+      image: barActual,
       title: "Bar & Beverages",
       category: "Dining & Bar",
       description: "Premium drinks and refreshing beverages served 24/7."
     },
     {
       id: 6,
-      image: restaurantDining,
+      image: restaurantActual,
       title: "Restaurant Service",
       category: "Dining & Bar",
       description: "24/7 dining service with quality meals and beverages."
