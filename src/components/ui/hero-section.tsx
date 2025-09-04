@@ -1,13 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { Star, Award, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import hotelRoomActual from "@/assets/hotel-room-actual.jpg";
+import hotelSuiteActual from "@/assets/hotel-suite-actual.jpeg";
+import conferenceRoomActual from "@/assets/conference-room-actual.jpeg";
+import barActual from "@/assets/bar-actual.jpg";
 
 const HeroSection = () => {
+  const images = [hotelRoomActual, hotelSuiteActual, conferenceRoomActual, barActual];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <section className="relative h-screen overflow-hidden bg-gradient-hero">
-      {/* Background Gradient Only - No Images */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-variant"></div>
+      {/* Background Images with Rotation */}
+      <div className="absolute inset-0">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-60' : 'opacity-0'
+            }`}
+          >
+            <img 
+              src={image} 
+              alt={`Hotel view ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-primary-variant/80"></div>
 
 
       {/* Content Overlay */}

@@ -62,7 +62,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span>+254 123 456 789</span>
+              <span>+254726705016</span>
             </div>
             <Button variant="default" size="sm" asChild>
               <Link to="/reservations">Book Now</Link>
@@ -100,11 +100,11 @@ const Navigation = () => {
               <div className="pt-4 border-t border-border flex flex-col space-y-2">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground px-2">
                   <Phone className="w-4 h-4" />
-                  <span>+254 123 456 789</span>
+                  <span>+254726705016</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground px-2">
                   <Mail className="w-4 h-4" />
-                  <span>info@jjhotel.com</span>
+                  <span>jjhotel@gmail.com</span>
                 </div>
                 <Button variant="default" size="sm" className="mx-2" asChild>
                   <Link to="/reservations" onClick={() => setIsOpen(false)}>
