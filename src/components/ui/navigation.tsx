@@ -31,8 +31,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center shadow-luxury">
-              <span className="text-primary-foreground font-bold text-lg">J&J</span>
+            <div className="w-10 h-10 rounded-lg shadow-luxury overflow-hidden">
+              <img src="/favicon.png" alt="J&J Hotel Logo" className="w-full h-full object-cover" />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-serif font-bold text-foreground">J & J Hotel</h1>
